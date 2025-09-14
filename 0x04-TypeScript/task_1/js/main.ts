@@ -1,4 +1,4 @@
-interface Directors extends Teacher {
+interface Director extends Teacher {
     numberOfReports: number;
 }
 
