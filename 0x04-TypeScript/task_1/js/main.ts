@@ -1,16 +1,3 @@
-// Interface for the constructor
-interface StudentConstructor {
-    firstName: string;
-    lastName: string;
-}
-
-// Interface for the class methods
-interface StudentInterface {
-    workOnHomework(): string;
-    displayName(): string;
-}
-
-// StudentClass implementation
 class StudentClass implements StudentInterface {
     private firstName: string;
     private lastName: string;
@@ -27,4 +14,13 @@ class StudentClass implements StudentInterface {
     displayName(): string {
         return this.firstName;
     }
+}
+interface StudentConstructor {
+    firstName: string;
+    lastName: string;
+}
+
+interface StudentInterface {
+    workOnHomework(): string;
+    displayName(): string;
 }
