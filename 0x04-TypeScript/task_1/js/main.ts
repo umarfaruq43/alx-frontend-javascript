@@ -1,3 +1,10 @@
+interface printTeacherFunction {
+    (firstName: string, lastName: string): string;
+}
+
+function printTeacher(firstName: string, lastName: string): string {
+    return `${firstName}. ${lastName}`;
+}
 interface Director extends Teacher {
     numberOfReports: number;
 }
@@ -10,14 +17,3 @@ interface Teacher {
     location: string;
     [key: string]: any; // Index signature to allow additional properties
 }
-
-interface printTeacherFunction {
-    (firstName: string, lastName: string): string;
-}
-
-const printTeacher: printTeacherFunction = (
-    firstName: string,
-    lastName: string
-): string => {
-    return `${firstName.charAt(0)}. ${lastName}`;
-};
