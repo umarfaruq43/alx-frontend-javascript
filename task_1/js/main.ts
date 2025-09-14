@@ -8,13 +8,7 @@ interface Teacher {
     [key: string]: any; // Index signature to allow additional properties
 }
 
-// Example usage
-const teacher3: Teacher = {
-    firstName: "John",
-    lastName: "Doe",
-    fullTimeEmployee: false,
-    location: "London",
-    contract: false,
-};
-
-console.log(teacher3);
+// Define the Directors interface that extends Teacher
+interface Directors extends Teacher {
+    numberOfReports: number;
+}
