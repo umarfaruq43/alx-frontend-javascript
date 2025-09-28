@@ -1,26 +1,18 @@
-class StudentClass implements StudentInterface {
-    private firstName: string;
-    private lastName: string;
-
-    constructor({ firstName, lastName }: StudentConstructor) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
-    workOnHomework(): string {
-        return "Currently working";
-    }
-
-    displayName(): string {
-        return this.firstName;
-    }
-}
-interface StudentConstructor {
-    firstName: string;
-    lastName: string;
+interface Teacher {
+    readonly firstName: string;
+    readonly lastName: string;
+    fullTimeEmployee: boolean;
+    yearsOfExperience?: number;
+    location: string;
+    [key: string]: any;
 }
 
-interface StudentInterface {
-    workOnHomework(): string;
-    displayName(): string;
-}
+const teacher3: Teacher = {
+    firstName: "John",
+    fullTimeEmployee: false,
+    lastName: "Doe",
+    location: "London",
+    contract: false,
+};
+
+console.log(teacher3);
